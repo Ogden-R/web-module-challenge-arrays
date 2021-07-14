@@ -283,9 +283,17 @@ Use the getAverageWordLength function below to do the following:
 */
 
 function getAverageWordLength(array){
-  /*code here*/
+  let wordCount = 0;
+  for (let i = 0; i < array.length; i++){
+    wordCount += array[i].split(" ").length; 
+  }
+  return wordCount;
 }
 console.log('Stretch Task 1:', getAverageWordLength(originalFlavors));
+console.log('Stretch Task 1:', getAverageWordLength(newFlavors));
+console.log('Stretch Task 1:', getAverageWordLength(seasonalFlavors));
+console.log('Stretch Task 1:', getAverageWordLength(regionalFlavors));
+
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
 Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors 
